@@ -1,0 +1,66 @@
+id_transacao|data|cliente|cpf_cliente|produto|categ_prod|quantidade|valor_unitario|cidade|email_cliente|telefone_cliente|forma_pagamento|status_venda|hora_venda|dia_semana|mes|marca|desconto|frete|valor_total|valor_pago|flag_fraude
+V001|2024-03-15|joao silva|456.123.789-99|cisco 2960 switch 48p|Infraestrutura|500.0|15.5|São Paulo|joao.silva@email.com|(11) 98888-7766|boleto|cancelado|10:11|Friday|3|Cisco|99.81|29.13|-7748.63|-77486.3|1
+V002|2024-03-15|Empresa X|000.111.222-33|hp dl360 gen10 server|Servidor||4100.0|Rio de Janeiro|contato@corp.com.br|(21) 97777-6655|boleto|estornado|19:30|Friday|3|HP|67.59|44.71|205000.0|204977.12|0
+V003|2024-03-15|Tech Solucoes|111.222.333-44|srv hp proliant dl380|Servidor|||MG|suporte@tech.com|(31) 96666-5544|boleto|estornado|09:45|Friday|3|HP|22.49|48.92|||0
+V005|2024-03-15|JOAO S.|123.456.789-00|hp dl360 gen10 server|Servidor|10.0||SP|joao.s.@mail.com|(11) 94396-9011|boleto|chargeback|09:07|Friday|3|HP|56.05|47.38|2900.0|2891.33|0
+V006|2024-03-15|empresa x|000.111.222-33|hp proliant tower|Servidor|30.0||RJ|contato@corp.com.br|(21) 97777-6655|boleto|retry_system|01:18|Friday|3|HP|95.46|42.18|||0
+V007|2024-03-15|Tech Solucoes|111.222.333-44|sw cisco 24p catalyst|Infraestrutura|120.0|1200.5|Belo Horizonte|suporte@tech.com|(31) 96666-5544|boleto|em_analise|17:44|Friday|3|Cisco|74.73|18.56|144060.0|144003.83|0
+V008|2024-03-15|Lucia F.|11122233344|dell insp 15 3000|Notebook|20.0|||lucia.f.@mail.com|(11) 95450-3249|cartao_parcelado|estornado|20:14|Friday|3|Dell|24.25|36.79|||0
+V009|2024-03-15|João Silva|123.456.789-00|hp proliant tower|Servidor|10.0|3200.0|São Paulo|joão.silva@mail.com|(11) 91860-2641|transferencia|pendente|17:59|Friday|3|HP|10.05|40.83|-32000.0|-31969.22|1
+V010|2024-05-01|Empresa X|000.111.222-33|mouse logi wireless m185|Perifericos|10.0|14250.0|Rio de Janeiro|contato@corp.com.br|(21) 97777-6655|cartao_parcelado|chargeback|20:03|Wednesday|5|Logitech|75.59|21.49|142500.0|142445.9|0
+V012|2024-01-10|Lúcia Ferreira|111.222.333-44|cisco 2960 switch 48p|Infraestrutura|10.0||Curitiba|lucia.f@provider.com|(11) 98888-7766|transferencia|cancelado|12:50|Wednesday|1|Cisco|88.22|17.03|||0
+V013|2024-03-15|joao silva|456.123.789-99|mse logitech m170 black|Perifericos|10.0|55000.0|S. Paulo|joao.silva@email.com|(11) 98888-7766|pix|aprovado|09:29|Friday|3|Logitech|29.84|34.11|550000.0|5500000.0|1
+V014|2024-02-04|Empresa X|000.111.222-33|sw cisco 24p catalyst|Infraestrutura|20.0|4900.0|RJ|contato@corp.com.br|(21) 97777-6655|transferencia|retry_system|05:46|Sunday|2|Cisco|27.28|42.35|98000.0|98015.07|0
+V016|2024-02-17|Lucia F.|11122233344|mse logitech m170 black|Perifericos|500.0|3550.0|PR|lucia.f.@mail.com|(11) 98518-5215|boleto|aprovado|05:39|Saturday|2|Logitech|79.08|32.71|1775000.0|1774953.63|0
+V018|2024-03-24|Empresa X|987.654.321-00|cisco 2960 switch 48p|Infraestrutura|20.0||Rio de Janeiro|contato@corp.com.br|(21) 97777-6655|transferencia|aprovado|15:20|Sunday|3|Cisco|66.93|17.39|56100.0|56050.46|0
+V020|2024-04-08|Lúcia Ferreira|999.888.777-66|srv hp proliant dl380|Servidor|10.0|16200.0|Curitiba|lucia.f@provider.com|(11) 98888-7766|transferencia|cancelado|18:46|Monday|4|HP|75.38|48.16|-162000.0|-162027.22|1
+V021|2024-04-02|João Silva|123.456.789-00|mouse logi wireless m185|Perifericos|10.0||SP|joão.silva@mail.com|(11) 91187-5285|cartao_parcelado|em_analise|05:25|Tuesday|4|Logitech|6.21|14.73|||0
+V022|2024-01-31|empresa x|987.654.321-00|mse logitech m170 black|Perifericos|50.0|1350.0|RJ|contato@corp.com.br|(21) 97777-6655|boleto|em_analise|15:09|Wednesday|1|Logitech|36.75|18.83|67500.0|67482.08|0
+V025|2024-06-28|JOAO S.|123.456.789-00|hp proliant tower|Servidor|10.0|1100.0|São Paulo||(11) 98454-7121|transferencia|estornado|07:43|Friday|6|HP|75.74|42.08|11000.0|10966.34|0
+V026|2024-05-15|Empresa X|987.654.321-00|sw cisco 24p catalyst|Infraestrutura|10.0||Rio de Janeiro|contato@corp.com.br|(21) 97777-6655|boleto|em_analise|17:57|Wednesday|5|Cisco|7.81|32.57|147800.0|147824.76|0
+V029|2024-05-17|João Silva|12345678900|catalyst 3850 l3 sw|Infraestrutura|10.0||SP|joão.silva@mail.com|(11) 99281-4312|cartao_parcelado|cancelado|21:13|Friday|5|Cisco|32.81|30.81|||0
+V030|2024-04-24|Empresa X|000.111.222-33|cisco 2960 switch 48p|Infraestrutura|80.0||RJ|contato@corp.com.br|(21) 97777-6655|pix|retry_system|18:03|Wednesday|4|Cisco|45.34|30.53|248000.0|2480000.0|1
+V031|2024-01-06|Tech Solucoes|45645645645|mse logitech m170 black|Perifericos||55.0||suporte@tech.com|(31) 96666-5544|boleto|chargeback|01:27|Saturday|1|Logitech|81.65|39.83|||0
+V033|2024-01-16|VIP Invest|555.555.555-55|cisco 2960 switch 48p|Infraestrutura||52000.0|São Paulo|vip.invest@mail.com|(11) 96644-2044|transferencia|aprovado|20:46|Tuesday|1|Cisco|3.17|26.35|520000.0|520023.18|0
+V035|2024-04-24|VIP Invest|55555555555|hp proliant tower|Servidor||19500.0|MG|vip.invest@mail.com|(11) 97887-7135|transferencia|retry_system|20:55|Wednesday|4|HP|37.56|37.31|195000.0|194999.75|0
+V037|2024-05-17|VIP INVEST||dell i7 16gb workstation|Notebook|500.0|5100.0|SP|vip.invest@mail.com|(11) 96697-2943|cartao_parcelado|chargeback|00:19|Friday|5|HP|72.79|18.91|2550000.0|2549946.12|0
+V038|2024-05-16|VIP Invest|555.555.555-55|hp proliant tower|Servidor|10.0|4200.0|RJ|vip.invest@mail.com|(11) 98585-9920|cartao_parcelado|chargeback|06:59|Thursday|5|HP|24.75|23.85|42000.0|41999.1|0
+V039|2024-06-18|VIP Invest|55555555555|tecl mec g pro tkl|Perifericos|20.0||Belo Horizonte|vip.invest@mail.com|(11) 92848-1527|pix|chargeback|14:38|Tuesday|6|Logitech|24.07|12.69|||0
+V041|2024-01-12|Eduardo Tech|777.888.999-00|mse logitech m170 black|Perifericos|10.0|45000.0|São Paulo|eduardo.tech@mail.com|(11) 91797-5009|transferencia|chargeback|04:32|Friday|1|Logitech|23.43|18.69|450000.0|449995.26|0
+V043|2024-05-27|Eduardo Tech|77788899900|teclado mecanico rgb|Infraestrutura|||MG||(11) 95739-4836|boleto|pendente|13:19|Monday|5|Logitech|23.69|45.05|||0
+V045|2024-05-31|EDUARDO TECH|777.888.999-00|cisco 2960 switch 48p|Infraestrutura|10.0|95.0|SP|eduardo.tech@mail.com|(11) 95508-1998|cartao_parcelado|em_analise|01:22|Friday|5|Cisco|62.6|27.09|950.0|914.49|0
+V047|2024-06-27|Eduardo Tech|777.888.999-00|hp dl360 gen10 server|Servidor|10.0|50000.0|Belo Horizonte|eduardo.tech@mail.com|(11) 97244-9592|transferencia|chargeback|07:54|Thursday|6|HP|14.92|25.06|500001.37|5000013.7|1
+V048|2024-05-10|Eduardo Tech|77788899900|teclado mecanico rgb|Infraestrutura|||PR|eduardo.tech@mail.com|(11) 94692-5927|cartao_parcelado|em_analise|13:35|Friday|5|Logitech|80.58|46.59|||0
+V050|2024-05-10|Julia Costa|000.111.222-33|hp proliant tower|Servidor|10.0|50000.0|Rio de Janeiro|julia.costa@mail.com|(11) 99683-3196|boleto|cancelado|11:05|Friday|5|HP|20.33|35.87|500000.0|500015.54|0
+V051|2024-05-10|Julia Costa|00011122233|ntb dell insp 15 i5 8gb|Notebook|10.0|3400.0|MG|julia.costa@mail.com|(11) 99775-4120|transferencia|pendente|06:51|Friday|5|Dell|67.37|34.12|34000.0|33966.75|0
+V053|2024-05-10|JULIA COSTA|000.111.222-33|not dell precision|Notebook|10.0|||julia.costa@mail.com|(11) 94555-8854|boleto|retry_system|06:47|Friday|5|Dell|30.32|46.36|||0
+V055|2024-06-27|Julia Costa|000.111.222-33|not dell precision|Notebook|10.0|1350.0|Belo Horizonte||(11) 92922-8846|cartao_parcelado|estornado|09:24|Thursday|6|Dell|39.66|19.57|-13500.0|-13520.09|1
+V057|2024-04-01|Marina Silva|999.000.111-22|mouse logi wireless m185|Perifericos|500.0|38500.0||marina.silva@mail.com|(11) 98639-9743|boleto|pendente|03:51|Monday|4|Logitech|35.96|45.31|19250000.0|19250009.35|0
+V058|2024-04-04|Marina Silva|99900011122|not dell precision|Notebook|50.0|190.0||marina.silva@mail.com|(11) 98692-6246|transferencia|pendente|00:16|Thursday|4|Dell|4.57|44.56|9500.0|9539.99|0
+V061|2024-02-20|MARINA SILVA|999.000.111-22|dell i7 16gb workstation|Notebook|10.0|14800.0|||(11) 97841-5836|cartao_parcelado|pendente|17:41|Tuesday|2|HP|37.98|43.33|148000.0|148005.35|0
+V062|2024-05-05|Marina Silva|999.000.111-22|tecl mec g pro tkl|Perifericos|10.0|||marina.silva@mail.com|(11) 96530-5216|transferencia|em_analise|05:08|Sunday|5|Logitech|46.08|39.31|||0
+V064|2024-05-18|Marina Silva|99900011122|dell i7 16gb workstation|Notebook||3500.0|PR|marina.silva@mail.com|(11) 99954-9000|pix|em_analise|21:03|Saturday|5|HP|52.39|43.56|35000.0|350000.0|1
+V065|2024-06-10|Empresa ABC|888.999.000-11|dell i7 16gb workstation|Notebook|10.0|60000.0|São Paulo|empresa.abc@mail.com|(11) 91104-7756|pix|cancelado|11:03|Monday|6|HP|70.72|10.37|600000.0|599939.65|1
+V066|2024-01-02|Empresa ABC|88899900011|ntb dell insp 15 i5 8gb|Notebook||125.0|Rio de Janeiro|empresa.abc@mail.com|(11) 98916-8993|transferencia|estornado|17:18|Tuesday|1|Dell|1.19|31.18|-125000.0|-124970.01|1
+V067|2024-06-27|Empresa ABC|888.999.000-11|teclado mecanico rgb|Infraestrutura|10000.0||MG|empresa.abc@mail.com|(11) 91280-9228|transferencia|em_analise|03:33|Thursday|6|Logitech|80.62|46.39|9990000.0|9989965.77|0
+V068|2024-06-07|Empresa ABC|888.999.000-11|not dell precision|Notebook|50.0|5400.0|Curitiba|empresa.abc@mail.com|(11) 93439-4948|boleto|estornado|02:23|Friday|6|Dell|81.52|20.69|270000.0|269939.17|0
+V069|2024-03-03|EMPRESA ABC|88899900011|catalyst 3850 l3 sw|Infraestrutura|10.0|13900.0||empresa.abc@mail.com|(11) 97652-8520|cartao_parcelado|em_analise|20:54|Sunday|3|Cisco|30.0|43.12|139001.37|139014.49|0
+V071|2024-04-07|Empresa ABC|888.999.000-11|hp proliant tower|Servidor|100.0|4500.0|Belo Horizonte||(11) 91519-2531|transferencia|chargeback|02:31|Sunday|4|HP|5.61|10.38|450000.0|450004.77|0
+V073|2024-01-25|João Silva|123.456.789-00|catalyst 3850 l3 sw|Infraestrutura|10.0|17200.0|São Paulo|joão.silva@mail.com|(11) 98109-6427|pix|estornado|08:02|Thursday|1|Cisco|22.98|46.05|172000.0|172023.07|1
+V075|2024-05-24|João Silva|12345678900|cisco 2960 switch 48p|Infraestrutura|500.0||MG|joão.silva@mail.com|(11) 92218-5593|pix|em_analise|06:37|Friday|5|Cisco|17.94|44.02|||0
+V077|2024-03-17|JOAO SILVA|456.123.789-99|dell insp 15 3000|Notebook|10.0|980.0|SP||(11) 98888-7766|cartao_parcelado|cancelado|12:48|Sunday|3|Dell|56.67|43.98|-9800.0|-9812.69|1
+V078|2024-03-29|João Silva|123.456.789-00|cisco 2960 switch 48p|Infraestrutura||42000.0|RJ||(11) 93292-2284|pix|aprovado|19:49|Friday|3|Cisco|43.71|43.55|420000.0|4200000.0|1
+V081|2024-06-11|Empresa X|000.111.222-33|ntb dell insp 15 i5 8gb|Notebook|10.0|55000.0||contato@corp.com.br|(21) 97777-6655|transferencia|pendente|13:11|Tuesday|6|Dell|49.06|24.23|550000.0|549975.17|0
+V082|2024-06-07|Empresa X|987.654.321-00|tecl mec g pro tkl|Perifericos|1500.0|||contato@corp.com.br|(21) 97777-6655|cartao_parcelado|pendente|12:45|Friday|6|Logitech|71.31|13.28|||0
+V084|2024-04-02|Empresa X|000.111.222-33|hp dl360 gen10 server|Servidor|100.0||Curitiba|contato@corp.com.br|(21) 97777-6655|pix|aprovado|08:06|Tuesday|4|HP|0.52|22.33|120050000000.0|120050000021.81|1
+V085|2024-04-20|EMPRESA X|987.654.321-00|dell i7 16gb workstation|Notebook|20.0|14200.0|SP||(21) 97777-6655|transferencia|chargeback|19:38|Saturday|4|HP|10.33|13.58|284000.0|284003.25|0
+V087|2024-03-15|Empresa X|987.654.321-00|ntb dell insp 15 i5 8gb|Notebook|10.0||MG||(21) 97777-6655|transferencia|chargeback|18:33|Friday|3|Dell|77.92|38.99|||0
+V089|2024-02-05|Tech Solucoes|45645645645|dell i7 16gb workstation|Notebook||16500.0|SP|suporte@tech.com|(31) 96666-5544|boleto|pendente|13:17|Monday|2|HP|26.84|15.84|-165000.0|-165011.0|1
+V090|2024-01-20|Tech Solucoes|111.222.333-44|sw cisco 24p catalyst|Infraestrutura|100.0||RJ||(31) 96666-5544|boleto|pendente|19:39|Saturday|1|Cisco|94.42|38.84|||0
+V091|2024-02-04|TECH SOLUCOES|111.222.333-44|dell insp 15 3000|Notebook|50.0|1350.0|Belo Horizonte|suporte@tech.com|(31) 96666-5544|pix|pendente|10:28|Sunday|2|Dell|94.88|23.29|67500.0|67428.41|1
+V093|2024-06-15|Tech Solucoes|45645645645|teclado mecanico rgb|Infraestrutura|10.0||São Paulo|suporte@tech.com|(31) 96666-5544|cartao_parcelado|estornado|15:20|Saturday|6|Logitech|30.04|34.13|||0
+V095|2024-03-15|Tech Solucoes|111.222.333-44|hp dl360 gen10 server|Servidor|500.0|3700.0|MG|suporte@tech.com|(31) 96666-5544|transferencia|em_analise|12:17|Friday|3|HP|96.78|41.28|1850001.37|18500013.7|1
+V097|2024-05-24|Lúcia Ferreira|999.888.777-66|dell insp 15 3000|Notebook|10.0||SP|lucia.f@provider.com|(11) 98888-7766|cartao_parcelado|cancelado|22:13|Friday|5|Dell|68.17|32.0|||0
+V099|2024-06-26|Lúcia Ferreira|999.888.777-66|teclado mecanico rgb|Infraestrutura|10.0|3600.0|MG|lucia.f@provider.com|(11) 98888-7766|transferencia|aprovado|07:16|Wednesday|6|Logitech|67.3|15.57|36000.0|35948.27|0
+V100|2024-04-06|Lúcia Ferreira|999.888.777-66|tecl mec g pro tkl|Perifericos||1150.0|PR|lucia.f@provider.com|(11) 98888-7766|transferencia|aprovado|17:32|Saturday|4|Logitech|99.07|29.17|-11500.0|-11569.9|1
+V100|2024-04-02|Lúcia Ferreira|999.888.777-66|ntb dell insp 15 i5 8gb|Notebook|10.0||PR|lucia.f@provider.com|(11) 98888-7766|pix|em_analise|05:41|Tuesday|4|Dell|10.94|19.93|12000.0|12008.99|1
