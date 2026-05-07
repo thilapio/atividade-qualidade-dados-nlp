@@ -128,3 +128,97 @@ for i, prod_int in enumerate(produtos_interno):
     # Se a similaridade for maior que 0.20 (20%), imprime o resultado. Isso atua como um 'threshold' para filtrar lixos e conexões fracas.
     if best_score > 0.20:
         print(f"Score: {best_score:.4f} | Interno: '{prod_int}' ===> Digital: '{best_match_name}'")
+
+# ==========================================
+# IMPORTAÇÃO DAS BIBLIOTECAS
+# ==========================================
+import pandas as pd 
+from sklearn.feature_extraction.text import TfidfVectorizer 
+from sklearn.metrics.pairwise import cosine_similarity 
+import numpy as np 
+
+# ==========================================
+# 1. CARREGAMENTO E PREPARAÇÃO DOS DADOS
+# ==========================================
+df_interno = pd.read_csv('dataset_1.csv', sep='|') 
+df_digital = pd.read_csv('dataset_2.csv', sep='|')
+
+def limpar_texto(txt):
+    if pd.isna(txt): return ""
+    return str(txt).lower().strip()
+
+# Padronização inicial das colunas principais
+df_interno['cliente_clean'] = df_interno['cliente'].apply(limpar_texto)
+df_digital['cliente_clean'] = df_digital['cliente'].apply(limpar_texto)
+
+df_interno['produto_clean'] = df_interno['produto'].apply(limpar_texto)
+df_digital['produto_clean'] = df_digital['produto'].apply(limpar_texto)
+
+df_interno['cidade_clean'] = df_interno['cidade'].apply(limpar_texto)
+df_digital['cidade_clean'] = df_digital['cidade'].apply(limpar_texto)
+
+# ==========================================
+# 2. EXPERIMENTOS DE CLIENTES (WORD VS N-GRAM)
+# ==========================================
+clientes_interno = df_interno['cliente_clean'].unique()
+clientes_digital = df_digital['cliente_clean'].unique()
+vocab_clientes = np.concatenate((clientes_interno, clientes_digital))
+
+# TF-IDF por Palavra
+vec_word = TfidfVectorizer(analyzer='word').fit(vocab_clientes)
+# TF-IDF por N-Gram (2 a 3 caracteres)
+vec_ngram = TfidfVectorizer(analyzer='char', ngram_range=(2,3)).fit(vocab_clientes)
+
+# Exemplo Comparativo: 'joao s.' (Interno) vs 'joao silva' (Digital)
+idx_int = list(clientes_interno).index('joao s.')
+idx_dig = list(clientes_digital).index('joao silva')
+
+sim_word = cosine_similarity(vec_word.transform(clientes_interno), vec_word.transform(clientes_digital))
+sim_ngram = cosine_similarity(vec_ngram.transform(clientes_interno), vec_ngram.transform(clientes_digital))
+
+print(f"Similaridade 'joao s.' vs 'joao silva' (Palavra): {sim_word[idx_int][idx_dig]:.4f}")
+print(f"Similaridade 'joao s.' vs 'joao silva' (N-Gram): {sim_ngram[idx_int][idx_dig]:.4f}")
+
+# ==========================================
+# 3. MAPEAMENTO DE PRODUTOS (CATÁLOGO)
+# ==========================================
+print("\n--- MAPEAMENTO DE PRODUTOS ---")
+prod_int_unq = [p for p in df_interno['produto_clean'].unique() if p != ""]
+prod_dig_unq = [p for p in df_digital['produto_clean'].unique() if p != ""]
+
+# Uso de N-Grams de 2 a 4 para capturar modelos técnicos (ex: dl360)
+vec_prod = TfidfVectorizer(analyzer='char', ngram_range=(2,4)).fit(prod_int_unq + prod_dig_unq)
+matriz_prod_int = vec_prod.transform(prod_int_unq)
+matriz_prod_dig = vec_prod.transform(prod_dig_unq)
+
+sim_prod = cosine_similarity(matriz_prod_int, matriz_prod_dig)
+
+for i, p_int in enumerate(prod_int_unq):
+    best_idx = np.argmax(sim_prod[i])
+    if sim_prod[i][best_idx] > 0.30: # Threshold de 30% para relevância
+        print(f"Match: {p_int} -> {prod_dig_unq[best_idx]} ({sim_prod[i][best_idx]:.4f})")
+
+# ==========================================
+# 5. ANÁLISE DE CIDADES (O LIMITE TÉCNICO)
+# ==========================================
+print("\n--- ANÁLISE DE CIDADES ---")
+# Extração de cidades únicas de ambos os sistemas
+cid_int_unq = [c for c in df_interno['cidade_clean'].unique() if c != ""]
+cid_dig_unq = [c for c in df_digital['cidade_clean'].unique() if c != ""]
+
+# Vetorização por N-Gram (2 a 3 letras) para capturar variações de acentuação
+vec_cid = TfidfVectorizer(analyzer='char', ngram_range=(2,3)).fit(cid_int_unq + cid_dig_unq)
+matriz_cid_int = vec_cid.transform(cid_int_unq)
+matriz_cid_dig = vec_cid.transform(cid_dig_unq)
+
+# Cálculo da similaridade entre as listas de cidades
+sim_cid = cosine_similarity(matriz_cid_int, matriz_cid_dig)
+
+# Demonstração de sucessos e falhas do modelo
+for i, c_int in enumerate(cid_int_unq):
+    # np.argmax identifica a cidade do sistema digital com maior proximidade vetorial
+    best_idx = np.argmax(sim_cid[i])
+    score = sim_cid[i][best_idx]
+    
+    # Exibe o resultado para discussão no relatório (ênfase em casos como 'sp' vs 'sao paulo')
+    print(f"Cidade Interna: '{c_int}' ===> Match Digital: '{cid_dig_unq[best_idx]}' (Score: {score:.4f})")
